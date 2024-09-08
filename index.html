@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organisation Scolaire</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
 </head>
 <body>
   <h1>Organisation Scolaire</h1>
 
-  <!-- Onglets -->
   <div class="tabs">
     <button class="tab-button" onclick="showTab('homeworks')">Devoirs</button>
     <button class="tab-button" onclick="showTab('events')">Événements</button>
   </div>
 
-  <!-- Formulaires -->
   <div id="homeworks" class="tab-content">
     <h2>Ajouter un Devoir</h2>
     <form id="homework-form">
@@ -31,7 +32,7 @@
     <div id="homework-list"></div>
   </div>
 
-  <div id="events" class="tab-content" style="display: none;">
+  <div id="events" class="tab-content">
     <h2>Ajouter un Événement</h2>
     <form id="event-form">
       <label for="event-title">Titre:</label>
@@ -44,6 +45,6 @@
     <div id="event-list"></div>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
