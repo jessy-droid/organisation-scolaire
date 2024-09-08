@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisation Scolaire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Organisation Scolaire</h1>
+
+  <!-- Onglets -->
+  <div class="tabs">
+    <button class="tab-button" onclick="showTab('homeworks')">Devoirs</button>
+    <button class="tab-button" onclick="showTab('events')">Événements</button>
+  </div>
+
+  <!-- Formulaires -->
+  <div id="homeworks" class="tab-content">
+    <h2>Ajouter un Devoir</h2>
+    <form id="homework-form">
+      <label for="subject">Matière:</label>
+      <input type="text" id="subject" required>
+      <label for="task">Tâche:</label>
+      <input type="text" id="task" required>
+      <label for="due-date">Date Limite:</label>
+      <input type="date" id="due-date" required>
+      <button type="submit">Ajouter</button>
+    </form>
+    <h2>Devoirs</h2>
+    <div id="homework-list"></div>
+  </div>
+
+  <div id="events" class="tab-content" style="display: none;">
+    <h2>Ajouter un Événement</h2>
+    <form id="event-form">
+      <label for="event-title">Titre:</label>
+      <input type="text" id="event-title" required>
+      <label for="event-date">Date:</label>
+      <input type="date" id="event-date" required>
+      <button type="submit">Ajouter</button>
+    </form>
+    <h2>Événements</h2>
+    <div id="event-list"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
