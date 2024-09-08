@@ -21,7 +21,7 @@ h1 {
 
 .tab-button {
   background-color: #555;
-  color: #fff;
+  color: #000; /* Changer la couleur du texte en noir */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
